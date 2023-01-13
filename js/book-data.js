@@ -1826,24 +1826,24 @@ addBtn.addEventListener("click", function (event) {
 });
 comment();
 function comment() {
-  let com_btn=document.createElement("com_btn");
+  let com_btn = document.createElement("com_btn");
   const commit_Btn = document.querySelector("#addABook");
 
-com_Btn.addEventListener("click", function (event) {
-  event.preventDefault();
-  const input = document.querySelector("buttonn");
-  input.innerHTML=input.value;
-});
+  com_Btn.addEventListener("click", function (event) {
+    event.preventDefault();
+    const input = document.querySelector("buttonn");
+    input.innerHTML = input.value;
+  });
 }
-  // let commitContainer = document.createElement("div");
-  // const btn_comments = document.getElementById("com_btn");
-  // commitContainer.innerHTML=btn_comments;
-  // console.log(newCommit)
-  // btn_comments.addEventListener("click", (e) => {
-  //   console.log(commit.value);
+// let commitContainer = document.createElement("div");
+// const btn_comments = document.getElementById("com_btn");
+// commitContainer.innerHTML=btn_comments;
+// console.log(newCommit)
+// btn_comments.addEventListener("click", (e) => {
+//   console.log(commit.value);
 
-  //   newCommit.innerHTML = commit.value;
-  // });
+//   newCommit.innerHTML = commit.value;
+// });
 //   let btn=document.querySelector("#butn");
 // let input=document.querySelector("#author");
 // let body=document.querySelector("body");
@@ -1854,16 +1854,17 @@ com_Btn.addEventListener("click", function (event) {
 // e.preventDefault();
 // title.innerHTML=input.value;
 // })
-let btn=document.querySelector("#butn");
-let input=document.querySelector("#author");
-let body=document.querySelector("body");
-let title=document.createElement("div");
-title.setAttribute("id","divSubmit");
+//button and even listener for comments
+let btn = document.querySelector("#butn");
+let input = document.querySelector("#author");
+let body = document.querySelector("body");
+let title = document.createElement("div");
+title.setAttribute("id", "divSubmit");
 body.append(title);
-btn.addEventListener("click",function(e){
-e.preventDefault();
-title.innerHTML=input.value;
-})
+btn.addEventListener("click", function (e) {
+  e.preventDefault();
+  title.innerHTML = input.value;
+});
 
 const sortBooks = new Book();
 // ***********SORTING*************
