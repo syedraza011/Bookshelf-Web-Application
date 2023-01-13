@@ -28,6 +28,7 @@ h3{
 }
 
 form{
+  margin-top: 180px;
     display: flex;
     color: white;
     width: 250px;
@@ -92,7 +93,7 @@ div{
     text-align: center;
     height: 40px;
     
-    
+    margin-top: 250px;
   }
   header {
     background-color: red;
@@ -122,29 +123,107 @@ div{
   #contactForm{
     display: flex;
     padding: 20px;
-    background-color: grey;
-    border: solid black 1px;
-    width: 200px;
+    background-color:brown;
+    /* border: solid black 1px; */
+    width:100%;
+    margin-top: 150px;
     margin-left: 50px;
-    justify-content: left;
-    margin-bottom: 25px;
+    margin-right: 50px;
+    justify-content: center;
+    /* margin-bottom: 25px; */
     border: 1px solid black;
   }
-  #comments *{
+  #comment_btn *{
     height: 250px;
     width: 250px;
   }
   #email * {
     width: 350px;
   }
-  #formBox{
-    display: flex;
-    padding: 20px;
-    background-color: grey;
-    border: solid black 1px;
-    width: 200px;
+  #input_formBox{
+    background-color: darkcyan;
+    border-top: 4850px;
+    width: 280px;
+    padding:25px ;
+    /* margin-top: 280px;
+    margin-bottom: 280px;
+    
+     display: flex;
+     flex-direction: row;
+  height: 550px;
+    align-items: flex-start;
+    justify-content: center;
+    width: 350px;
+    vertical-align: top; */
+    /*background-color: grey;
+    border: solid black 1px; 
+   
     margin-left: 50px;
-    justify-content: left;
+   
     margin-bottom: 25px;
+    align-items: flex-start;  */
   }
-  
+  .subCommit{
+    background-color: rgb(157, 93, 14);
+    display: none;
+  }
+  #comm_btn{
+background-color: blueviolet;
+width: 50px;
+height: 50px;
+  }
+  /* .cont_Form *{
+    margin-top: 100px;
+    display: flex;
+  } */
+
+  body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.contact_form{
+  background-color: darkgreen;
+  width: 350px;
+  padding: 25px;
+  display: flex;
+}
+#contact_comment{
+  display: flex;
+  justify-content: center;
+  height: 250px;
+}
+.aboutBody{
+  margin-top: 250px;
+  display: block;
+  margin-bottom: 150px;
+  margin-left: 50px;
+  margin-right: 50px;
+}

@@ -1685,23 +1685,25 @@ const allBooks = getAllBooks();
 //console.log(getAllBooks());
 
 class Book {
-  constructor(author, language, subject, title) {
+  constructor(author, language, subject, title, comment) {
     this.author = author;
     this.language = language;
     this.subject = subject;
     this.title = title;
+    this.comment = comment;
   }
-  // rendering a book
-  renderBook() {}
-  // getAllBooks() {
-  //   let bookReturn = [];
-  //   for (let i = 0; i < bookData.length; i++) {
-  //     let book = bookData[i];
-  //     bookReturn.push(book);
-  //   }
-  //   return bookReturn;
-  // }
 }
+// // rendering a book
+// renderBook() {}
+// // getAllBooks() {
+// //   let bookReturn = [];
+// //   for (let i = 0; i < bookData.length; i++) {
+// //     let book = bookData[i];
+// //     bookReturn.push(book);
+// //   }
+// //   return bookReturn;
+// // }
+// }
 
 // //Bookshelf class that has empty constructor because it doesn't really contain any properties
 class Bookshelf {
@@ -1730,24 +1732,30 @@ class Bookshelf {
     const cardMaker = (aBook) => {
       console.log(aBook);
       const container = document.createElement("div");
+      const comment = document.createElement("button");
+      comment.innerHTML = "Add comment";
+      comment.setAttribute = ("id", "com_btn");
       const author = document.createElement("h3");
       const language = document.createElement("h3");
       const subject = document.createElement("h3");
       const title = document.createElement("h3");
+
       //make pieces
       //add content
+      author.innerHTML = aBook.author;
       author.innerHTML = aBook.author;
       language.innerHTML = aBook.language;
       subject.innerHTML = aBook.subject;
       title.innerHTML = aBook.title;
-      container.append(author, language, subject, title);
-
+      container.append(author, language, subject, title, comment);
+      //container.append(comment());
       return container;
     };
     bookData.map((singleObj) => {
       console.log(singleObj);
       const card = cardMaker(singleObj);
       body.append(card);
+      // body.append(comment());
     });
     // let parentEle = document.createElement("div");
     // let childEle = document.createElement("ul");
@@ -1775,7 +1783,6 @@ class Bookshelf {
       return 0;
     });
   }
-  
 }
 
 // // Made instance of Bookshelf to then fire off the renderAllBooks function I made within
@@ -1817,9 +1824,49 @@ addBtn.addEventListener("click", function (event) {
   inputTitle.value = "";
   // console.log(userBook)
 });
+comment();
+function comment() {
+  let com_btn=document.createElement("com_btn");
+  const commit_Btn = document.querySelector("#addABook");
+
+com_Btn.addEventListener("click", function (event) {
+  event.preventDefault();
+  const input = document.querySelector("buttonn");
+  input.innerHTML=input.value;
+});
+}
+  // let commitContainer = document.createElement("div");
+  // const btn_comments = document.getElementById("com_btn");
+  // commitContainer.innerHTML=btn_comments;
+  // console.log(newCommit)
+  // btn_comments.addEventListener("click", (e) => {
+  //   console.log(commit.value);
+
+  //   newCommit.innerHTML = commit.value;
+  // });
+//   let btn=document.querySelector("#butn");
+// let input=document.querySelector("#author");
+// let body=document.querySelector("body");
+// let title=document.createElement("div");
+// title.setAttribute("id","divSubmit");
+// body.append(title);
+// btn.addEventListener("click",function(e){
+// e.preventDefault();
+// title.innerHTML=input.value;
+// })
+let btn=document.querySelector("#butn");
+let input=document.querySelector("#author");
+let body=document.querySelector("body");
+let title=document.createElement("div");
+title.setAttribute("id","divSubmit");
+body.append(title);
+btn.addEventListener("click",function(e){
+e.preventDefault();
+title.innerHTML=input.value;
+})
+
 const sortBooks = new Book();
 // ***********SORTING*************
-
 
 // // ***EVENTUALLY MAKE A MOUSEOVER TO DISPLAY ALL INFO FOR EACH BOOK****
 // // const bookImage = document.querySelector('li')
