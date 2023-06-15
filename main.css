@@ -1,0 +1,364 @@
+/* Basically ended up going for a skeuomorphism style even tho I'm generally not a huge fan */
+
+/* styling is pretty self explanatory:
+fiddled with a lot of options. went with blurry background effect for most of my submission and content divs */
+
+/* started out a bit unorganized but as time went on you'll see I begane commenting out each section.
+will definitely do that more in the future since it's much easier to target the section you want to edit
+also need to develope a more consistent naming system for classes and ids */
+
+nav{
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  border: solid 1px black;
+  position: fixed;
+  width: 100%;
+  position: fixed;
+  /* backdrop-filter: blur(7px); */
+}
+
+span{
+  display: flex;
+  flex-direction: row;
+  margin-right: 30px;
+}
+
+h4{
+  margin: 8px;
+  display: flex;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#mainInputDiv {
+  margin-top: 85px;
+  margin-left: 25px;
+  border-radius: 2px;
+  display: flex;
+  /* display: block; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px white;
+  /* background-color: lightgray; */
+  backdrop-filter: blur(15px);
+  /* opacity: .5; */
+  left: 0;
+  width: 300px;
+  min-width: 300px;
+  position: fixed;
+  padding: 20px;
+  /* height: 100%; */
+}
+
+#indexBody{
+  display: flex;
+  flex-direction: row;
+  /* padding-left: 160px; */
+  justify-content: center;
+  background-image: url(./images/library.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* this is the master books div. set margin so it's down a bit from the nav bar */
+.books-container{
+  margin-top: 200px;
+  /* margin-left: 280px; */
+}
+
+h1{
+  margin-left: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h3{
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  /* border-bottom: white solid 1px; */
+}
+
+#formBox{
+  display: flex;
+  padding: 20px;
+  /* background-color: rgb(223, 191, 150);
+  border: solid black 1px; */
+  border-radius: 2px;
+  /* opacity: .7; */
+  width: 200px;
+  /* margin-left: 50px; */
+  justify-content: right;
+  margin-bottom: 25px;
+}
+
+.addBookForm{
+  display: flex;
+  color: black;
+  width: 250px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#Author, #Language, #Subject, #Title{
+  margin-bottom: 10px;
+}
+
+
+button{
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  font-size: small;
+  background-color: white;
+  text-align: center;
+  align-items: center;
+}
+button:hover{
+  background-color: rgb(237, 237, 237);
+  transition: 0.1s;
+}
+
+/* ul{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 25px;
+} */
+
+/* this creates the blue underlines for the index cards */
+.author, .language, .subject, .title {
+  display: flex;
+  align-items: center;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-bottom: 2px solid blue;
+  font-size: 18px;
+  /* text-shadow: 2px 2px 2px rgba(0, 0, 0.1, 0); */
+  /* font-size: large; */
+  /* font-weight: bolder; */
+  /* text-transform: uppercase; */
+  list-style: none;
+  /* background-color: orange; */
+  /* border: solid brown 1px; */
+  /* box-shadow: 2px 2px grey; */
+  /* min-height: 22px; */
+  padding: 5px;
+  /* min-width: 250px; */
+  /* width: 45%; */
+  margin: 5px;
+}
+
+/* this is the visual representation of each new book card div. decided to make them look like index cards */
+.new-container{
+  /* background-color: antiquewhite; */
+  /* border: solid 1px black; */
+  display: block;
+  /* margin-left: 100px; */
+  border-radius: 3px;
+  padding: 10px;
+  /* backdrop-filter: blur(7px); */
+  font-size: 15px;
+  width: 500px;
+  background-image: url(./images/card.jpg);
+  background-size: cover;
+  /* box-shadow: 3px 3px lightblue; */
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, .4);
+}
+
+.author{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.subject{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.comments{
+  display: inline-block;
+  width: 490px;
+  border-bottom: red 3px solid;
+  margin-left: 5px;
+}
+
+.commentBtn{
+  height: 20px;
+  width: 100px;
+  margin: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
+  border: solid lightgray 1px;
+}
+
+.comment-li{
+  font-size: 18px;
+  color: green;
+  margin-inline: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
+  text-align: right;
+  overflow-wrap: break-word;
+  padding-bottom: 5px;
+  list-style: none;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+
+#sort{
+  /* justify-content: right; */
+  /* margin-left: 65px; */
+  margin-bottom: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  width: 200px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* .comments{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+} */
+
+.comment-input{
+  margin: 10px;
+  width: 300px;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+/* ***** MAIN PAGE ***** */
+#aboutBody, #contactBody{
+  display: flex;
+  justify-content: center;
+  background-image: url(./images/library.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.aboutDiv{
+  position: fixed;
+  margin-top: 80px;
+  width: 500px;
+  backdrop-filter: blur(25px);
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 25px;
+}
+
+.aboutText{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-shadow: 1px 1px black;
+  /* box-shadow: 10px 10px 10px rgba(0, 0, 0, .5); */
+  border-radius: 2px;
+  padding-bottom: 5px;
+}
+
+/* ***** CONTACT PAGE ***** */
+
+h2{
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  /* margin: 5px; */
+  /* border-bottom: white solid 1px; */
+}
+
+.contactDiv{
+  position: fixed;
+  margin-top: 80px;
+  width: 500px;
+  backdrop-filter: blur(25px);
+  border: solid 1px white;
+  border-radius: 3px;
+  padding: 25px;
+}
+
+.contactInput{
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+#name-input{
+  width: 355px;
+}
+
+#address{
+  display: flex;
+}
+
+#apt, #zip, #state{
+  width: 40px;
+}
+
+#contact{
+  display: flex;
+  flex-direction: row;
+}
+
+#submit-input{
+  width: 475px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ***** REGISTRATION ***** */
+
+.registration{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 400px;
+  margin-top: 85px;
+  border: solid 1px white;
+  border-radius: 3px;
+  padding: 15px;
+  backdrop-filter: blur(6px);
+}
+
+.regForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.regClass{
+  margin: 5px;
+  width: 200px;
+}
+
+#submitBtn{
+  margin: 5px;
+  width: 100px;
+}
+
+/* SEARCH BAR SECTION */
+
+#searchBar{
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  text-align: left;
+  padding-left: 8px;
+  width: 220px;
+}
